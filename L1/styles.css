@@ -1,0 +1,165 @@
+body {
+    background-color: beige;
+    color: #b94f08;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+    .GridBox {
+        grid-template-columns: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .MenuWrap {
+        flex-direction: column;
+    }
+    .GridBox {
+        grid-template-columns: auto;
+    }
+}
+
+p {
+    padding: 1px;
+}
+
+main {
+    flex: 1;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 16px;
+}
+
+code {
+    font-family: "Courier New", monospace;
+    color: #c7254e;
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.TopView {
+    background-color: #ffb86d;
+    font-family: ’Oswald’, sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    min-height: 200px;
+    min-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.MenuWrap {
+    background-color: #f8a041;
+    font-family: ’Oswald’, sans-serif;
+    font-size: 1rem;
+    min-height: 4rem;
+    height: 50px;
+    min-width: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;   
+}
+
+.MenuItem {
+    flex-basis: 33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+@media (max-width: 600px) {
+    .MenuWrap {
+        flex-direction: column;
+    }
+}
+
+.MenuItem:hover {
+    background-color: #ff996d;
+    color: white;
+}
+
+.SelectedItem {
+    flex-basis: 33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: #ff6f6d;
+}
+
+.Foot {
+    background-color: #ffb86d;
+}
+
+.ZdjeciePasek {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.Home {
+    width: 100%;
+    min-height: 100vh;
+    background: beige;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    gap: 6em;
+    flex-direction: column;
+}
+
+.GridBox {
+    display: grid;
+    text-align: center;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
+    gap: 3rem;
+    row-gap: 3rem;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.GridItem {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.GridItem img {
+    max-width: 350px;
+    object-fit: cover;
+    height: 150px;
+    border-radius: 2em;
+}
