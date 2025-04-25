@@ -1,11 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     const images = [
       "img1.jpg",
       "img2.jpg",
       "img3.jpg",
       "img4.jpg"
     ];
-  
+
     const galleryContainer = document.getElementById("gallery");
   
     // Tworzenie obietnicy dla kazdego obrazka z osobna
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     // Ladowanie wszystkich obrazow jednoczesnie przy pomocy obienic
-    Promise.all(images.map(loadImage)).then(images => {
+    Promise.all(images.map(loadImage)).then((images) => {
         images.forEach(img => {
             const wrapper = document.createElement("div");
             wrapper.className = "GridItem";
