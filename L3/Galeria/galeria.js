@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const images = [
       "img1.jpg",
       "img2.jpg",
-      "img3.jpg"
+      "img3.jpg",
+      "img4.jpg"
     ];
   
     const galleryContainer = document.getElementById("gallery");
