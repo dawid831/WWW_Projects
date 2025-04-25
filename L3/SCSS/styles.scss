@@ -56,7 +56,6 @@ main {
   flex: 1;
 }
 
-
 .TopView {
   background-color: $accent-color;
   font-family: $font-main;
@@ -80,6 +79,51 @@ main {
   gap: 0.5rem;
   width: 100%;
 }
+
+.MenuWrap .menu-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+}
+.MenuWrap .menu-items {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.MenuWrap .menu-items a {
+  text-align: center;
+}
+.MenuWrap .menu-items.active {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .MenuWrap .menu-toggle {
+    display: none;
+  }
+  .MenuWrap .menu-items {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+}
+
+.SelectedItem, .MenuItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
 
 %MenuItemBase {
   display: flex;
@@ -107,10 +151,39 @@ main {
   color: white;
 }
 
+#menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+
+  @include respond(tablet) {
+    display: none; // ukrywamy na większych ekranach
+  }
+}
+
+#menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include respond(tablet) {
+    flex-direction: row;
+  }
+}
+
 .Foot {
   background-color: $accent-color;
   padding: 2rem;
   text-align: center;
+}
+
+.ZdjeciePasek {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 .ZdjeciePasek {
