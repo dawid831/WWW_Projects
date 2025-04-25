@@ -1,166 +1,212 @@
 body {
-    background-color: beige;
-    color: #b94f08;
-    margin: 0;
-    padding: 0;
-    font-size: 1.125rem;
-    font-family: "Oswald", sans-serif;
+  background-color: beige;
+  color: #b94f08;
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+  font-family: "Oswald", sans-serif;
+}
+
+p {
+  padding: 0.5rem;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 1rem;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  color: #c7254e;
+}
+
+main {
+  flex: 1;
+}
+
+.TopView {
+  background-color: #ffb86d;
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.MenuWrap {
+  background-color: #f8a041;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  width: 100%;
+  position: relative;
+}
+
+.MenuWrap .menu-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+}
+
+.MenuWrap .menu-items {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.MenuWrap .menu-items a {
+  text-align: center;
+}
+
+.MenuWrap .menu-items.active {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .MenuWrap .menu-toggle {
+    display: none;
   }
-  
-  p {
-    padding: 0.5rem;
-  }
-  
-  pre {
-    background-color: #f4f4f4;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    overflow-x: auto;
-    font-size: 1rem;
-  }
-  
-  code {
-    font-family: "Courier New", monospace;
-    color: #c7254e;
-  }
-  
-  main {
-    flex: 1;
-  }
-  
-  .TopView {
-    background-color: #ffb86d;
-    font-family: "Oswald", sans-serif;
-    font-size: 2rem;
-    text-transform: uppercase;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .MenuWrap .menu-items {
+    display: flex !important;
+    flex-direction: row;
     justify-content: center;
-    padding: 2rem;
-  }
-  
-  .MenuWrap {
-    background-color: #f8a041;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    padding: 0.5rem;
-    gap: 0.5rem;
-    width: 100%;
+    margin-top: 0;
   }
-  
-  .SelectedItem, .MenuItem {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-  }
-  
-  .MenuItem {
-    background-color: white;
-    color: black;
-  }
-  .MenuItem:hover {
-    background-color: #ff996d;
-    color: white;
-  }
-  
-  .SelectedItem {
-    background-color: #ff6f6d;
-    color: white;
-  }
-  
-  .Foot {
-    background-color: #ffb86d;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .ZdjeciePasek {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-  }
-  
+}
+.SelectedItem, .MenuItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.MenuItem {
+  background-color: white;
+  color: black;
+}
+
+.MenuItem:hover {
+  background-color: #ff996d;
+  color: white;
+}
+
+.SelectedItem {
+  background-color: #ff6f6d;
+  color: white;
+}
+
+.Foot {
+  background-color: #ffb86d;
+  padding: 2rem;
+  text-align: center;
+}
+
+.ZdjeciePasek {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+body.home .Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+body.home .Home img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+body.home .Home pre {
+  max-width: 90%;
+}
+
+body.home .Home .opis {
+  max-width: 600px;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 1024px) {
   body.home .Home {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
     text-align: center;
+  }
+  body.home .Home h1, body.home .Home p, body.home .Home img, body.home .Home pre {
+    font-size: 1.5rem;
+    max-width: 800px;
   }
   body.home .Home img {
-    max-width: 90%;
+    width: 100%;
+    max-width: 600px;
     height: auto;
     border-radius: 1rem;
   }
-  body.home .Home pre {
-    max-width: 90%;
-  }
-  body.home .Home .opis {
-    max-width: 600px;
-    font-size: 1.2rem;
-  }
-  @media (min-width: 1024px) {
-    body.home .Home {
-      flex-direction: column;
-      text-align: center;
-    }
-    body.home .Home h1, body.home .Home p, body.home .Home img, body.home .Home pre {
-      font-size: 1.5rem;
-      max-width: 800px;
-    }
-    body.home .Home img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 1rem;
-    }
-  }
-  
+}
+body.subpage .GridBox {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+body.subpage .GridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
+}
+
+body.subpage .GridItem img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+@media (min-width: 1024px) {
   body.subpage .GridBox {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem;
-    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
   }
   body.subpage .GridItem {
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 100%;
-    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
   }
   body.subpage .GridItem img {
     max-width: 100%;
-    height: 200px;
-    object-fit: cover;
+    max-height: 200px;
     border-radius: 1rem;
   }
-  @media (min-width: 1024px) {
-    body.subpage .GridBox {
-      grid-template-columns: 1fr 1fr;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    body.subpage .GridItem {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-      font-size: 1.2rem;
-    }
-    body.subpage .GridItem img {
-      max-width: 100%;
-      max-height: 200px;
-      border-radius: 1rem;
-    }
-  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <meta charset="UTF-8">
+    <title>Dawid Nowak Galeria</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../CSS/styles.min.css">
+</head>
+
+<body class="subpage">
+    <header class="TopView">
+        <p>    
+            Dawid Nowak CV
+        </p>
+        <nav class="MenuWrap">
+            <button id="menu-toggle" aria-label="Otwórz menu">☰</button>
+
+            <nav id="menu-items" class="MenuWrap">
+                <a href="../Strona_CV.html" class="MenuItem">Home</a>
+                <a href="../Zainteresowania/zainteresowania.html" class="MenuItem">Zainteresowania</a>
+                <a href="../Projekty/projekty.html" class="MenuItem">Projekty</a>
+                <a href="#" class="SelectedItem">Galeria</a>
+            </nav>
+        </nav>
+    </header>
+
+    <main>
+        <div id="gallery" class="GridBox"></div>
+
+        <noscript>
+            <p>Aby zobaczyć dynamiczną galerię, włącz JavaScript w swojej przeglądarce.</p>
+            <div class="GridBox">
+                <div class="GridItem">
+                <img src="img1.jpg" alt="Zdjęcie z galerii" />
+                </div>
+                <div class="GridItem">
+                <img src="img2.jpg" alt="Zdjęcie z galerii" />
+                </div>
+                <div class="GridItem">
+                <img src="img3.jpg" alt="Zdjęcie z galerii" />
+                </div>
+            </div>
+            </noscript>
+    </main>
+
+    <footer class="Foot">
+        <p>Autor: Dawid Nowak</p>
+        <p>email: <a href="mailto:ndawid831@gmail.com">ndawid831@gmail.com</a> </p>
+        
+    </footer>
+    <script src="galeria.js" defer></script>
+    <script src="../menu.js" defer></script>
+    <noscript>
+        <style>
+          .menu-items { display: block !important; }
+          .menu-toggle { display: none !important; }
+        </style>
+    </noscript>
+</body>
+
+</html>

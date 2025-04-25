@@ -12,12 +12,17 @@
 <body class="subpage">
     <header class="TopView">
         <p>    
-            Dawid Nowak CV
+            Dawid Nowak CV  
         </p>
         <nav class="MenuWrap">
-            <a href="../Strona_CV.html" class="MenuItem">Home</a>
-            <a href="../Zainteresowania/zainteresowania.html" class="MenuItem">Zainteresowania</a>
-            <a href="#" class="SelectedItem">Projekty</a>
+            <button id="menu-toggle" aria-label="Otwórz menu">☰</button>
+
+            <nav id="menu-items" class="MenuWrap">
+                <a href="../Strona_CV.html" class="MenuItem">Home</a>
+                <a href="../Zainteresowania/zainteresowania.html" class="MenuItem">Zainteresowania</a>
+                <a href="#" class="SelectedItem">Projekty</a>
+                <a href="../Galeria/galeria.html" class="MenuItem">Galeria</a>
+            </nav>
         </nav>
     </header>
 
@@ -55,6 +60,13 @@
         <p>email: <a href="mailto:ndawid831@gmail.com">ndawid831@gmail.com</a> </p>
         
     </footer>
+    <script src="../menu.js" defer></script>
+    <noscript>
+        <style>
+          .menu-items { display: block !important; }
+          .menu-toggle { display: none !important; }
+        </style>
+    </noscript>
 </body>
 
 </html>

@@ -4,7 +4,8 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald:700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <meta charset="UTF-8">
-    <title>Dawid Nowak Hobby</title>
+    <title>Dawid Nowak Zainteresowania
+    </title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="../CSS/styles.min.css">
 </head>
@@ -15,9 +16,14 @@
             Dawid Nowak CV  
         </p>
         <nav class="MenuWrap">
-            <a href="../Strona_CV.html" class="MenuItem">Home</a>
-            <a href="#" class="SelectedItem">Zainteresowania</a>
-            <a href="../Projekty/projekty.html" class="MenuItem">Projekty</a>
+            <button id="menu-toggle" aria-label="Otwórz menu">☰</button>
+
+            <nav id="menu-items" class="MenuWrap">
+                <a href="../Strona_CV.html" class="MenuItem">Home</a>
+                <a href="#" class="SelectedItem">Zainteresowania</a>
+                <a href="../Projekty/projekty.html" class="MenuItem">Projekty</a>
+                <a href="../Galeria/galeria.html" class="MenuItem">Galeria</a>
+            </nav>
         </nav>
     </header>
 
@@ -63,6 +69,13 @@
         <p>email: <a href="mailto:ndawid831@gmail.com">ndawid831@gmail.com</a> </p>
         
     </footer>
+    <script src="../menu.js" defer></script>
+    <noscript>
+        <style>
+          .menu-items { display: block !important; }
+          .menu-toggle { display: none !important; }
+        </style>
+    </noscript>
 </body>
 
 </html>
